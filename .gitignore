@@ -45,3 +45,5 @@ venv/
 # VSCode and editor project files
 .vscode/
 .idea/
+
+dev.db
