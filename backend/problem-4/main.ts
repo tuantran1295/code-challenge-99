@@ -1,6 +1,12 @@
+
+
 var sum_to_n_a = function(n) {
     return n * (n + 1) / 2;
 };
+
+// Iterative Approach
+// Time Complexity: O(n) — Loop runs n times.
+//     Space Complexity: O(1)
 
 var sum_to_n_b = function(n) {
     let sum = 0;
