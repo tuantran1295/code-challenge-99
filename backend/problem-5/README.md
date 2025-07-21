@@ -73,7 +73,7 @@ curl -X POST http://localhost:3000/items -H "Content-Type: application/json" -d 
 - Supports `?skip=0&take=20` pagination
 
 ```sh
-curl "http://localhost:3000/items" curl "http://localhost:3000/items?name=somequery"
+curl "http://localhost:3000/items" curl "http://localhost:3000/items?name=First%20thing"
 ```
 
 #### Retrieve
@@ -81,7 +81,7 @@ curl "http://localhost:3000/items" curl "http://localhost:3000/items?name=somequ
 - `GET /items/:id`
 
 ```sh
-curl -X PUT http://localhost:3000/items/1 -H "Content-Type: application/json" -d '{"name":"Updated name"}'
+ curl "http://localhost:3000/items/1"
 ```
 
 #### Update
@@ -89,12 +89,16 @@ curl -X PUT http://localhost:3000/items/1 -H "Content-Type: application/json" -d
 - `PUT /items/:id`
     - Body: `{ "name": "New name" }`
 ```sh
-curl -X DELETE http://localhost:3000/items/1
+ curl -X PUT http://localhost:3000/items/1 -H "Content-Type: application/json" -d '{"name":"Updated name"}'
 ```
 
 #### Delete
 
 - `DELETE /items/:id`
+
+```shell
+ curl -X DELETE http://localhost:3000/items/1
+```
 
 ### 5. Example Request
 
