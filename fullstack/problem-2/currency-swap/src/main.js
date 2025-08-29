@@ -144,7 +144,7 @@ function renderSwapForm() {
     // Submit button
     const btn = document.createElement('button');
     btn.className = 'swap-btn';
-    btn.innerText = loading ? 'Swapping...' : 'Swap';
+    btn.innerText = loading ? 'Resetting...' : 'Reset';
     btn.disabled = !!error || !amount || loading;
     btn.addEventListener('click', () => {
         if (validate() !== true) return;
